@@ -11,11 +11,10 @@
     <link rel="stylesheet" href="./styles/assets.css">
 </head>
 <body>
-
     <header>
         <div class="header-space">
-        <div class="logo">PokeDex</div>
-        <input type="text" id="searchInput" placeholder="Suche nach einem Pokemon..." oninput="handleSearch()">
+            <div class="logo">PokeDex</div>
+            <input type="text" id="searchInput" placeholder="Suche nach einem Pokemon..." oninput="handleSearch()">
         </div>
     </header>
 
@@ -28,8 +27,8 @@
             <div id="statsChartContainer" style="display: none;"></div>
             <div id="pokemonInfoContainer" style="display: none;"></div> 
             <div class="modal-navigation">
-                <button id="prevBtn" onclick="navigatePokemon(-1)">Zurück</button>
-                <button id="nextBtn" onclick="navigatePokemon(1)">Weiter</button>
+                <button id="prevBtn" onclick="navigatePokemon(-1)">back</button>
+                <button id="nextBtn" onclick="navigatePokemon(1)">next</button>
             </div>
         </div>   
     </div>
@@ -41,11 +40,10 @@
         </div>
     
         <div id="pokemonContainer"></div>
-        <div class="nxt-pokemon"><button id="loadMoreBtn" onclick="loadMorePokemons()">Mehr Pokemon laden</button></div>
+        <div class="nxt-pokemon">
+            <button id="loadMoreBtn" onclick="loadMorePokemons()">Mehr Pokemon laden</button>
+        </div>
     </main>
-    
-
-   
 
     <footer>
         <p>&copy; 2024 Pokedex</p>
@@ -53,5 +51,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-

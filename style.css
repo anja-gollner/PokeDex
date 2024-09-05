@@ -79,6 +79,12 @@ main {
     transition: none;
 }
 
+@media (max-width: 500px) {
+    .pokemon-card:hover {
+       display: none;
+    }
+}
+
 #pokemonModal {
     display: none;
     position: fixed;
