@@ -1,0 +1,46 @@
+button {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+    background-color: #1f1f1f;
+}
+
+button:hover {
+    background-color: #444343;
+}
+
+.btn-stats {
+    background-color: rgba(255, 99, 132, 1)!important;
+}
+
+.btn-stats:hover {
+    background-color: rgb(225, 62, 97)!important;
+}
+
+.btn-info {
+    background-color: rgb(76, 141, 184)!important;
+}
+
+.btn-info:hover {
+    background-color: rgb(38, 128, 188)!important;
+}
+
+input#searchInput {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 220px;
+}
+
+@media (max-width: 500px) {
+    input#searchInput {
+        width: 150px; 
+    }
+}

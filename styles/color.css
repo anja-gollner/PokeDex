@@ -1,0 +1,72 @@
+/* Farben für verschiedene Pokémon-Typen */
+.type-grass {
+    background-color: #78C850; /* Grün für Grass */
+}
+
+.type-fire {
+    background-color: #F08030; /* Rot für Fire */
+}
+
+.type-water {
+    background-color: #6890F0; /* Blau für Water */
+}
+
+.type-electric {
+    background-color: #F8D030; /* Gelb für Electric */
+}
+
+.type-ice {
+    background-color: #98D8D8; /* Hellblau für Ice */
+}
+
+.type-fighting {
+    background-color: #C03028; /* Dunkelrot für Fighting */
+}
+
+.type-poison {
+    background-color: #A040A0; /* Lila für Poison */
+}
+
+.type-ground {
+    background-color: #E0C068; /* Braun für Ground */
+}
+
+.type-flying {
+    background-color: #A890F0; /* Helllila für Flying */
+}
+
+.type-psychic {
+    background-color: #F85888; /* Pink für Psychic */
+}
+
+.type-bug {
+    background-color: #A8B820; /* Olivgrün für Bug */
+}
+
+.type-rock {
+    background-color: #B8A038; /* Beige für Rock */
+}
+
+.type-ghost {
+    background-color: #705898; /* Violett für Ghost */
+}
+
+.type-dragon {
+    background-color: #7038F8; /* Violett für Dragon */
+}
+
+.type-dark {
+    background-color: #705848; /* Dunkelbraun für Dark */
+}
+
+.type-steel {
+    background-color: #B8B8D0; /* Grau für Steel */
+}
+
+.type-fairy {
+    background-color: #EE99AC; /* Hellrosa für Fairy */
+}
+
+.type-normal {
+    background-color: #A8A878; /* Grau für Normal */
+}

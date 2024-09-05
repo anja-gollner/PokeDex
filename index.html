@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDex</title>
+    <link rel="icon" href="/img/pokeball.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/color.css">
+    <link rel="stylesheet" href="/styles/spinner.css">
+    <link rel="stylesheet" href="/styles/assets.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-space">
+        <div class="logo">PokeDex</div>
+        <input type="text" id="searchInput" placeholder="Suche nach einem Pokemon..." oninput="handleSearch()">
+        </div>
+    </header>
+
+    <div id="pokemonModal" class="modal" onclick="handleModalClick(event)">
+        <div class="modal-content">
+            <span class="close" onclick="hidePokemonDetails()">&times;</span>
+            <div id="pokemonDetails"></div>
+            <button id="showStatsBtn" class="btn-stats" onclick="toggleStatsChart()">Show Stats</button>
+            <button id="showInfoBtn" class="btn-info" onclick="toggleInfo()">Information</button>
+            <div id="statsChartContainer" style="display: none;"></div>
+            <div id="pokemonInfoContainer" style="display: none;"></div> 
+            <div class="modal-navigation">
+                <button id="prevBtn" onclick="navigatePokemon(-1)">Zurück</button>
+                <button id="nextBtn" onclick="navigatePokemon(1)">Weiter</button>
+            </div>
+        </div>   
+    </div>
+
+    <main>
+        <div id="loadingSpinner" class="spinner-container">
+            <div class="spinner"></div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    
+        <div id="pokemonContainer"></div>
+        <div class="nxt-pokemon"><button id="loadMoreBtn" onclick="loadMorePokemons()">Mehr Pokemon laden</button></div>
+    </main>
+    
+
+   
+
+    <footer>
+        <p>&copy; 2024 Pokedex</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
