@@ -6,7 +6,7 @@ let currentPokemon = null;
 
 async function fetchPokemons(offset, limit) {
     const loadingSpinner = document.getElementById('loadingSpinner');
-    loadingSpinner.style.display = 'flex'; // Spinner anzeigen
+    loadingSpinner.style.display = 'flex'; 
 
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
@@ -16,12 +16,12 @@ async function fetchPokemons(offset, limit) {
     } catch (error) {
         console.error("Fehler beim Laden der Pokémon:", error);
     } finally {
-        loadingSpinner.style.display = 'none'; // Spinner ausblenden
+        loadingSpinner.style.display = 'none'; 
     }
 }
 
 function getTypeClass(pokemon) {
-    const type = pokemon.types[0].type.name; // Haupt-Typ des Pokémon
+    const type = pokemon.types[0].type.name; 
     return `type-${type}`;
 }
 
@@ -34,7 +34,6 @@ function displayPokemons(pokemons) {
                 const pokemonCard = document.createElement('div');
                 pokemonCard.classList.add('pokemon-card');
                 
-                // Füge die Typ-spezifische Klasse hinzu
                 const typeClass = getTypeClass(data);
                 pokemonCard.classList.add(typeClass);
 
@@ -50,11 +49,11 @@ function displayPokemons(pokemons) {
 }
 
 function convertWeightToKg(weight) {
-    return weight / 10; // Gewicht von hg in kg umrechnen
+    return weight / 10; 
 }
 
 function convertHeightToCm(height) {
-    return height * 10; // Höhe von dm in cm umrechnen
+    return height * 10; 
 }
 
 function createPokemonDetailsHTML(pokemon) {
@@ -144,7 +143,7 @@ function getCurrentPokemon() {
 function createStatsChart() {
     const pokemon = getCurrentPokemon(); 
     if (!pokemon || !pokemon.stats || pokemon.stats.length < 3) {
-        console.error("Pokemon data is missing or incomplete.");
+        console.error("Pokemon data missing or incomplete");
         return;
     }
     
@@ -154,7 +153,7 @@ function createStatsChart() {
 
     const statsChartContainer = document.getElementById('statsChartContainer');
     if (!statsChartContainer) {
-        console.error("Stats chart container not found.");
+        console.error("Statscontainer not found");
         return;
     }
 
@@ -163,11 +162,11 @@ function createStatsChart() {
 }
 
 function generateSVGContent(hp, attack, defense) {
-    const maxStat = 150;  // Maximalwert für die X-Achse
+    const maxStat = 150;  
     const svgWidth = 300;
     const svgHeight = 200;
-    const barHeight = 30; // Höhe der Balken
-    const barSpacing = 20;  // Abstand zwischen den Balken
+    const barHeight = 30; 
+    const barSpacing = 20;  
 
     const hpWidth = (hp / maxStat) * svgWidth;
     const attackWidth = (attack / maxStat) * svgWidth;
